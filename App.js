@@ -17,11 +17,21 @@ const BikeDetails = () => {
         </Text>
       </View>
 
+      {/* Informações do Motor com Imagem do Ambiente */}
       <View style={styles.card}>
         <Text style={styles.label}>Motor:</Text>
         <Text style={styles.description}>399cc, Bicilíndrico, DOHC</Text>
+
+        {/* Imagem do Ambiente */}
+        <View style={styles.imageContainer}>
+          <Image
+            src="https://http2.mlstatic.com/D_NQ_NP_966324-MLB71734313012_092023-O.webp" // Substitua com a URL desejada
+            style={styles.ambientImage}
+          />
+        </View>
       </View>
 
+      {/* Outras informações sobre a moto */}
       <View style={styles.card}>
         <Text style={styles.label}>Tanque:</Text>
         <Text style={styles.description}>14 Litros</Text>
@@ -68,6 +78,17 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 200,
+    borderRadius: 10,
+  },
+  imageContainer: {
+    width: "100%",
+    marginTop: 20,
+    borderRadius: 10,
+    overflow: "hidden", // Garante que a imagem não ultrapasse o contêiner
+  },
+  ambientImage: {
+    width: "100%",
+    height: 200, // Ajuste o tamanho conforme necessário
     borderRadius: 10,
   },
   card: {
